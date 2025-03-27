@@ -32,7 +32,7 @@
         nav a:hover {
             background-color: #2E7D32;
         }
-        .container {
+         .container {
             max-width: 900px;
             margin: 20px auto;
             padding: 20px;
@@ -49,6 +49,32 @@
             text-align: center;
             margin: 20px 0;
         }
+        .container img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 10px auto;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .image-text {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Tạo khoảng cách giữa ảnh và văn bản */
+        }
+
+        .image-text img {
+            width: 50%; /* Kích thước ảnh */
+            border-radius: 10px;
+
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .text {
+            flex: 1; /* Văn bản chiếm phần còn lại của container */
+        }
+
+
         footer {
             text-align: center;
             padding: 10px;
@@ -73,47 +99,62 @@
     </nav>
     <div class="container" id="home">
         <h2>Giới thiệu AgriBarn IoT</h2>
+        <img src="giaoDienMayTinh.png" alt="Giao diện trên máy tính AgriBarn IoT">
         <p>AgriBarn IoT là hệ thống giám sát và điều khiển môi trường nông nghiệp thông minh giúp người nông dân giám sát và điều khiển môi trường chuồng trại chăn nuôi, nhà kính, lò ấp trứng, kho bảo quản nông sản một cách tự động, từ xa nhằm tối ưu hóa sản xuất và tăng năng suất.</p>
         <p>Dự án được phát triển bởi <strong>Trần Minh Khang - Lớp 7A, Trường THCS Phú Minh </strong>trong khuôn khổ Hội thi tin học trẻ năm học 2024 -2025.</p>
     </div>
     <div class="container" id="features">
         <h2>Tính năng nổi bật</h2>
-        <div class="feature">
-            <h3>Giám sát nhiệt độ và độ ẩm theo thời gian thực</h3>
-            <p>• Cảm biến DHT11 đo nhiệt độ và độ ẩm môi trường, cập nhật dữ liệu liên tục.</p>
-            <p>• Hiển thị thông số trên màn hình LCD giúp theo dõi dễ dàng tại chỗ.</p>
-            <p>• Gửi dữ liệu lên ứng dụng di động qua Blynk Cloud, cho phép giám sát từ bất kỳ đâu có kết nối Internet.</p>
+        <div class="image-text">
+          <img src="giaoDienTrenDienThoai.jpg" alt="Giao diện trên điện thoại AgriBarn IoT">
+          <div class="text">
+            <div class="feature">
+                <h3>Giám sát nhiệt độ và độ ẩm theo thời gian thực</h3>
+                <p>• Cảm biến DHT11 đo nhiệt độ và độ ẩm môi trường, cập nhật dữ liệu liên tục. Hiển thị thông số trên màn hình LCD giúp theo dõi dễ dàng tại chỗ.</p>
+                <p>• Gửi dữ liệu lên ứng dụng di động qua Blynk Cloud, cho phép giám sát từ bất kỳ đâu có kết nối Internet.</p>
+            </div>
+            <div class="feature">
+                <h3>Điều khiển tự động theo môi trường thực tế</h3>
+                <p>• Khi nhiệt độ quá thấp hệ thống sưởi tự động bật để giữ ấm.</p>
+                <p>• Khi nhiệt độ hoặc độ ẩm vượt ngưỡng, hệ thống làm mát kích hoạt giúp điều hòa môi trường.</p>
+                <p>• Hệ thống hoạt động hoàn toàn tự động theo các thông số do người dùng cài đặt.</p>
+            </div>
+            <div class="feature">
+                <h3>Điều khiển từ xa qua điện thoại/ máy tính bảng … (IoT & Blynk Cloud)</h3>
+                <p> Người dùng có thể bật/tắt quạt và đèn sưởi bất cứ lúc nào qua ứng dụng miễn phí Blynk trên điện thoại, hay web Blynk trên máy tính.</p>
+            </div>
+            <div class="feature">
+                <h3>Kết hợp giữa truyền thống và hiện đại điều khiển qua công tắc vật lý</h3>
+                <p>• Ngoài chế độ tự động và điều khiển từ xa, người dùng có thể bật/tắt quạt và đèn sưởi bằng nút bấm gắn trên thiết bị.</p>
+                <p>• Tiện lợi khi không có kết nối mạng hoặc cần can thiệp nhanh chóng.</p>
+            </div>
+            <div class="feature">
+                <h3>Cảnh báo thông minh bằng còi và đèn tín hiệu</h3>
+                <p>• Khi nhiệt độ hoặc độ ẩm vượt quá giới hạn cài đặt, hệ thống sẽ phát tín hiệu cảnh báo bằng còi và đèn nhấp nháy giúp người dùng phản ứng kịp thời để bảo vệ cây trồng, vật nuôi.</p>
+                <p>• Ứng dụng Blynk cũng có thể gửi tín hiệu cảnh báo đến điện thoại khi có sự cố. </p>
+            </div>
+            <div class="feature">
+                <h3>Lời khuyên dựa trên mô hình AI được huấn luyện trên Google Colab</h3>
+                <p>Đưa ra lời khuyên điều khiển hệ thống sử dụng kết quả huấn luyện theo mô hình AI đơn giản trên dữ liệu huấn luyện do người cùng cập nhật thực tế</p>
+            </div>
+          </div>
+
         </div>
-        <div class="feature">
-            <h3>Điều khiển tự động theo môi trường thực tế</h3>
-            <p>• Khi nhiệt độ quá thấp hệ thống sưởi tự động bật để giữ ấm.</p>
-            <p>• Khi nhiệt độ hoặc độ ẩm vượt ngưỡng, hệ thống làm mát kích hoạt giúp điều hòa môi trường.</p>
-            <p>• Hệ thống hoạt động hoàn toàn tự động theo các thông số do người dùng cài đặt phù hợp với nhiều loại, nhiều giai đoạn phát triển khác nhau của vật nuôi và cây trồng.</p>
+    </div>
+    <div class="container" id="technology">
+        <h2>Ứng dụng</h2>
+        <div class="image-text">
+            <img src="nhaKinh.png" alt="Ứng dụng AgriBarn IoT trong nhà kính">
+            <img src="loApTrung.png" alt="Ứng dụng AgriBarn IoT trong lò ấp trứng">
         </div>
-        <div class="feature">
-            <h3>Điều khiển từ xa qua điện thoại/ máy tính bảng … (IoT & Blynk Cloud)</h3>
-            <p>• Người dùng có thể bật/tắt quạt và đèn sưởi bất cứ lúc nào qua ứng dụng Blynk trên điện thoại, hay web Blynk trên máy tính kết nối mạng.</p>
-            <p>• Ứng dụng hỗ trợ kết nối Wi-Fi hoặc 4G, cho phép điều khiển thiết bị từ xa mà không cần có mặt tại trang trại.</p>
-            <p>• Blynk Cloud miễn phí, không cần máy chủ riêng, giúp giảm chi phí vận hành.</p>
-        </div>
-        <div class="feature">
-            <h3>Kết hợp giữa truyền thống và hiện đại điều khiển qua công tắc vật lý</h3>
-            <p>• Ngoài chế độ tự động và điều khiển từ xa, người dùng có thể bật/tắt quạt và đèn sưởi bằng nút bấm gắn trên thiết bị kết hợp giữa phương pháp truyền thống và hiện đại.</p>
-            <p>• Tiện lợi khi không có kết nối mạng hoặc cần can thiệp nhanh chóng.</p>
-        </div>
-        <div class="feature">
-            <h3>Cảnh báo thông minh bằng còi và đèn tín hiệu</h3>
-            <p>• Khi nhiệt độ hoặc độ ẩm vượt quá giới hạn cài đặt, hệ thống sẽ phát tín hiệu cảnh báo bằng còi và đèn nhấp nháy.</p>
-            <p>• Cảnh báo này giúp người dùng phản ứng kịp thời để bảo vệ cây trồng, vật nuôi.</p>
-            <p>• Ứng dụng Blynk cũng có thể gửi tín hiệu cảnh báo đến điện thoại khi có sự cố. </p>
-        </div>
-        <div class="feature">
-            <h3>Lời khuyên dựa trên mô hình AI được huấn luyện trên Google Colab</h3>
-            <p>Đưa ra lời khuyên điều khiển hệ thống sử dụng kết quả huấn luyện theo mô hình AI đơn giản sử dụng Google colab dựa trên dữ liệu huấn luyên do người cùng cập nhật thực tế</p>
+        <div class="image-text">
+            <img src="khoBaoQuan.png" alt="Ứng dụng AgriBarn IoT trong kho bảo quản nông sản">
+            <img src="traiChanNuoi.png" alt="Ứng dụng AgriBarn IoT trong trang trại chăn nuôi">
         </div>
     </div>
     <div class="container" id="technology">
         <h2>Công nghệ sử dụng</h2>
+         <img src="moHinh.png" alt="Mô hình AgriBarn IoT">
          <p>1. Mã nguồn chương trình điều khiển được viết bằng C++ biên dịch và nạp lên ESP32 thông qua IDE Andruino được cài đặt trên Windows.</p>
          <p>2. Phần cứng sử dụng: Module wifi ESP32 loại 30pin, cảm biến nhiệt độ, độ ẩm DHT11, relay 4 kênh (5V/220V), màn hình LCD-I2C 16x2, nút bấm, LED báo hiệu, còi loa Buzzer, board test và dây kết nối</p>
          <p>3. Giao diện điều khiển trên máy tính và điện thoại được thiết kế và cài đặt bằng phương pháp kéo thả dựa trên nền tảng Blynk Cloud chạy trong môi trường Android và Window 10/11 thông dụng.</p>
