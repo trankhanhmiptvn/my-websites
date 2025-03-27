@@ -63,7 +63,7 @@
 <body>
     <header>
         AgriBarn IoT - Hệ thống giám sát và điều khiển môi trường nông nghiệp thông minh<br>
-        <small>Được phát triển bởi Trần Minh Khang - Lớp 7A, Trường THCS Phú Minh</small>
+        <small>Được phát triển bởi Trần Minh Khang - Lớp 7A, Trường THCS Phú Minh trong khuôn khổ Hội thi tin học trẻ năm học 2024 -2025</small>
     </header>
     <nav>
         <a href="#home">Trang chủ</a>
@@ -80,17 +80,45 @@
     <div class="container" id="features">
         <h2>Tính năng nổi bật</h2>
         <div class="feature">
-            <h3>Giám sát môi trường</h3>
-            <p>Đo nhiệt độ, độ ẩm môi trường nông nghiệp một cách tự động theo thời gian thực.</p>
+            <h3>Giám sát nhiệt độ và độ ẩm theo thời gian thực</h3>
+            <p>• Cảm biến DHT11 đo nhiệt độ và độ ẩm môi trường, cập nhật dữ liệu liên tục.</p>
+            <p>• Hiển thị thông số trên màn hình LCD giúp theo dõi dễ dàng tại chỗ.</p>
+            <p>• Gửi dữ liệu lên ứng dụng di động qua Blynk Cloud, cho phép giám sát từ bất kỳ đâu có kết nối Internet.</p>
         </div>
         <div class="feature">
-            <h3>Điều khiển từ xa</h3>
-            <p>Hệ thống có thể giám sát môi trường nông nghiệp với các thông số về nhiệt độ, độ ẩm từ xa qua các thiết bị di động như điện thoại, máy tính bảng ..., tự động cảnh báo người sử dụng khi nhiệt độ, độ ẩm vượt ngưỡng cho phép, tự động điều khiển các hệ thống làm mát và giữ ấm đảm bảo điều kiện tối ưu cho cây trồng và vật nuôi.</p>
+            <h3>Điều khiển tự động theo môi trường thực tế</h3>
+            <p>• Khi nhiệt độ quá thấp hệ thống sưởi tự động bật để giữ ấm.</p>
+            <p>• Khi nhiệt độ hoặc độ ẩm vượt ngưỡng, hệ thống làm mát kích hoạt giúp điều hòa môi trường.</p>
+            <p>• Hệ thống hoạt động hoàn toàn tự động theo các thông số do người dùng cài đặt phù hợp với nhiều loại, nhiều giai đoạn phát triển khác nhau của vật nuôi và cây trồng.</p>
+        </div>
+        <div class="feature">
+            <h3>Điều khiển từ xa qua điện thoại/ máy tính bảng … (IoT & Blynk Cloud)</h3>
+            <p>• Người dùng có thể bật/tắt quạt và đèn sưởi bất cứ lúc nào qua ứng dụng Blynk trên điện thoại, hay web Blynk trên máy tính kết nối mạng.</p>
+            <p>• Ứng dụng hỗ trợ kết nối Wi-Fi hoặc 4G, cho phép điều khiển thiết bị từ xa mà không cần có mặt tại trang trại.</p>
+            <p>• Blynk Cloud miễn phí, không cần máy chủ riêng, giúp giảm chi phí vận hành.</p>
+        </div>
+        <div class="feature">
+            <h3>Kết hợp giữa truyền thống và hiện đại điều khiển qua công tắc vật lý</h3>
+            <p>• Ngoài chế độ tự động và điều khiển từ xa, người dùng có thể bật/tắt quạt và đèn sưởi bằng nút bấm gắn trên thiết bị kết hợp giữa phương pháp truyền thống và hiện đại.</p>
+            <p>• Tiện lợi khi không có kết nối mạng hoặc cần can thiệp nhanh chóng.</p>
+        </div>
+        <div class="feature">
+            <h3>Cảnh báo thông minh bằng còi và đèn tín hiệu</h3>
+            <p>• Khi nhiệt độ hoặc độ ẩm vượt quá giới hạn cài đặt, hệ thống sẽ phát tín hiệu cảnh báo bằng còi và đèn nhấp nháy.</p>
+            <p>• Cảnh báo này giúp người dùng phản ứng kịp thời để bảo vệ cây trồng, vật nuôi.</p>
+            <p>• Ứng dụng Blynk cũng có thể gửi tín hiệu cảnh báo đến điện thoại khi có sự cố. </p>
+        </div>
+        <div class="feature">
+            <h3>Lời khuyên dựa trên mô hình AI được huấn luyện trên Google Colab</h3>
+            <p>Đưa ra lời khuyên điều khiển hệ thống sử dụng kết quả huấn luyện theo mô hình AI đơn giản sử dụng Google colab dựa trên dữ liệu huấn luyên do người cùng cập nhật thực tế</p>
         </div>
     </div>
     <div class="container" id="technology">
         <h2>Công nghệ sử dụng</h2>
-        <p>Hệ thống sử dụng cảm biến IoT, giao tiếp không dây và phân tích dữ liệu bằng AI để tối ưu hóa sản xuất.</p>
+         <p>1. Mã nguồn chương trình điều khiển được viết bằng C++ biên dịch và nạp lên ESP32 thông qua IDE Andruino được cài đặt trên Windows.</p>
+         <p>2. Phần cứng sử dụng: Module wifi ESP32 loại 30pin, cảm biến nhiệt độ, độ ẩm DHT11, relay 4 kênh (5V/220V), màn hình LCD-I2C 16x2, nút bấm, LED báo hiệu, còi loa Buzzer, board test và dây kết nối</p>
+         <p>3. Giao diện điều khiển trên máy tính và điện thoại được thiết kế và cài đặt bằng phương pháp kéo thả dựa trên nền tảng Blynk Cloud chạy trong môi trường Android và Window 10/11 thông dụng.</p>
+         <p>4. Mô hình huấn luyện AI được cài đặt và huấn luyện trên môi trường Google Colab sử dụng code mẫu được viết trên ngôn ngữ Python.</p>
     </div>
     <div class="container" id="video">
         <h2>Video giới thiệu sản phẩm</h2>
@@ -101,7 +129,6 @@
     <div class="container" id="contact">
         <h2>Liên hệ</h2>
         <p>Email: tranminhkhang542012@gmail.com</p>
-        <p>Hotline: 0865-848-888</p>
     </div>
     <footer>
         &copy; 2025 AgriBarn IoT - Giải pháp nông nghiệp thông minh<br>
